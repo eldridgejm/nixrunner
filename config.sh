@@ -1,5 +1,5 @@
 # the repository URL
-URL=https://github.com/<user>/<repo>
+URL=https://github.com/USER/REPO
 
 # the runner token; get this from the settings page of the repo
 TOKEN=
