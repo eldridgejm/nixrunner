@@ -26,4 +26,5 @@ contains the Nix store for the image. This volume is shared between all containe
 image, thereby caching the Nix store.
 
 The `init.sh` script also bind mounts the `work` directory to `~/work` inside the
-container. GitHub actions can take advantage of this to store persistent values.
+container. GitHub actions can take advantage of this to persist values between restarts
+of the action runner.
