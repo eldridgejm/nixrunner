@@ -5,7 +5,7 @@ if [ ! -e ./action-runner/.credentials ]; then
     exit 1
 fi
 
-docker run -it --rm \
+docker run --rm \
 	--mount type=volume,src=nixrunner-store,dst=/nix \
 	--mount type=bind,src=$(pwd)/action-runner,dst=/home/nixrunner/action-runner \
 	--mount type=bind,src=$(pwd)/work,dst=/home/nixrunner/work \
