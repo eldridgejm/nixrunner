@@ -8,7 +8,10 @@ install: image
 
 .PHONY: image
 image:
-	docker build -t nixrunner - < Dockerfile
+	docker build -t nixrunner \
+		--build arg USER_ID=${shell id --user} \
+		--build arg GROUP_ID=${shell id --group} \
+		- < Dockerfile
 
 
 .PHONY: clean
