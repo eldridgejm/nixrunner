@@ -3,6 +3,10 @@ nixrunner
 
 A Dockerized self-hosted GitHub action runner that comes with Nix installed.
 
+Requirements
+------------
+The host machine only needs Docker. It does not need to have nix installed.
+
 
 Setup
 -----
