@@ -3,7 +3,7 @@ ARG USER_ID=1000
 ARG GROUP_ID=100
 ARG RUNNER_VERSION="2.277.1"
 
-RUN apt-get update && apt-get install -y curl git bash libicu63 openssl xz-utils
+RUN apt-get update && apt-get install -y curl git bash libicu63 openssl xz-utils python3
 
 # create a "nixrunner" user with the same user ID as host
 RUN useradd -u ${USER_ID} -g ${GROUP_ID} -ms /bin/sh nixrunner
