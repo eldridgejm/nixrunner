@@ -19,7 +19,7 @@ RUN mkdir -p ~/.config/nix
 RUN echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
 # download and extract github runner
-RUN cd ~ && mkdir action-runner && cd action-runner && \
+RUN cd ~ && mkdir action-runner-base && cd action-runner-base && \
     curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz && \
     tar xzf actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz && \
     rm -rf actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
