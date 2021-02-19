@@ -8,7 +8,7 @@ Setup
 -----
 
 1. Clone this repository
-2. Rune `make` to build the Docker image. It will be named `nixrunner`.
+2. Run `make` to build the Docker image. It will be named `nixrunner`.
 3. Edit `config.sh`, filling in the values as necessary using those provided by GitHub.
 4. (Optional) copy a machine user's private key to `ssh/id_rsa`.
 5. Run `./init.sh` to start the runner.
