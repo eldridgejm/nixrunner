@@ -22,8 +22,8 @@ Conventions
 -----------
 
 The `init.sh` script will create a docker volume named `nixrunner-store`. This volume
-contains the Nix store for the image. This makes is easy to share a Nix store between
-containers.
+contains the Nix store for the image. This volume is shared between all containers running this
+image, thereby caching the Nix store.
 
 The `init.sh` script also bind mounts the `work` directory to `~/work` inside the
 container. GitHub actions can take advantage of this to store persistent values.
