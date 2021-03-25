@@ -6,6 +6,7 @@ ARG RUNNER_VERSION="2.277.1"
 RUN apt-get update && apt-get install -y curl git bash libicu63 openssl xz-utils python3
 
 # create a "nixrunner" user with the same user ID as host
+RUN groupadd --gid ${GROUP_ID} nixrunner
 RUN useradd -u ${USER_ID} -g ${GROUP_ID} -ms /bin/sh nixrunner
 
 # install nix as nixrunner
